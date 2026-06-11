@@ -4,7 +4,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 import os
 from dotenv import load_dotenv
-from streamlit import context
+import streamlit as st
 
 load_dotenv()
 
@@ -35,7 +35,7 @@ def generate_answer(context, query):
 
     client = OpenAI(
         base_url="https://integrate.api.nvidia.com/v1",
-        api_key=os.getenv("NVIDIA_API_KEY")
+        api_key=st.secrets["NVIDIA_API_KEY"]
     )
 
     prompt = f"""
