@@ -6,7 +6,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot application. It i
 
 ## Project Structure
 
-- **`ingest.py`**: Reads text documents from `agora/fulltext/`, splits them by section (`SEC. XX.`), chunks the text using `RecursiveCharacterTextSplitter`, and stores the embeddings into a local Chroma vector database (`./chroma_db`).
+- **`ingest.py`**:Loads and merges the AGORA segments and documents datasets, formats the content into LangChain Documents, generates embeddings using `BAAI/bge-large-en-v1.`5, and stores the resulting vectors in a local Chroma vector database (`./chroma_db`) for semantic retrieval.
 - **`rag.py`**: Contains the core logic and function for the RAG pipeline. It loads the vector database by using `BAAI/bge-large-en-v1.5` embeddings, and queries the NVIDIA API (`meta/llama-3.3-70b-instruct`) to generate answers based on the context.
 - **`main.py`**: A front-end web application built with `Streamlit` : Chatbased design
 
@@ -14,7 +14,7 @@ This project is a Retrieval-Augmented Generation (RAG) chatbot application. It i
 
 ## Architecture
 
-![Framework](Framework.png)
+![Framework](Picture/Framework.png)
 
 ---
 
@@ -80,7 +80,6 @@ Limitation
 ---
 
 ##  Setup & Installation
-### Web accesss
 
 ### Setup Locally
 1. **Activate your virtual environment (if available):**
@@ -124,9 +123,9 @@ Limitation
 
 
 ## Example of the system
-![The Question and the Result](Example1.png)
+![The Question and the Result](Picture/Example1.png)
 <br>
-![The References](Example2.png)
+![The References](Picture/Example2.png)
 *the text are too big I just highlighted main references*
 
 ---
@@ -180,7 +179,7 @@ I focus on the percision of the result seems the response is not too long that i
 ## ✨ How you ensure answer quality
 The answer are stricly following by the references context , if the result didnt have the proper reference that it will show don't know  
 I'm setting it at the prompting   
-![alt text](Prompt.png)
+![alt text](Picture/Prompt.png)
 
 Moreover, every answer will show the references or context in the terminal, for me to check whether the models are strictly follow the references.  
-![The References](Example2.png)
+![The References](Picture/Example2.png)
