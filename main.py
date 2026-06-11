@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 
-from rag import generate_answer, get_sources, load_vector_db, retrieve_context
+from rag import generate_answer, load_vector_db, retrieve_context
 
 load_dotenv()
 
