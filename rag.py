@@ -32,10 +32,15 @@ def retrieve_context(db, query, k=5):
     return context, results
 
 def generate_answer(context, query):
+    api_key = st.secrets.get("NVIDIA_API_KEY") or os.getenv("NVIDIA_API_KEY")
+
+    if not api_key:
+        st.error("NVIDIA_API_KEY not found")
+        st.stop()
 
     client = OpenAI(
         base_url="https://integrate.api.nvidia.com/v1",
-        api_key=st.secrets["NVIDIA_API_KEY"]
+        api_key=api_key
     )
 
     prompt = f"""
