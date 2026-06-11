@@ -109,7 +109,7 @@ You can try out the deployed application directly here without any local setup:
 ##  Usage
 
 1. **Ingest the Documents:**
-   Ensure your text files are present in `agora/fulltext/` and run the ingestion script to create the embeddings database:
+   Merged two file segements and documents, and run the ingestion script to create the embeddings database:
    ```bash
    python ingest.py
    ```
