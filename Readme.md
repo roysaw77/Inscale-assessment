@@ -81,7 +81,11 @@ Limitation
 
 ##  Setup & Installation
 
-### Setup Locally
+### 🌐 Live Web Demo
+You can try out the deployed application directly here without any local setup:
+👉 **[Inscale Assessment RAG Chat](https://inscale-assessment-rag-chat.streamlit.app/)**
+
+### 💻 Setup Locally
 1. **Activate your virtual environment (if available):**
    ```bash
    venv\Scripts\Activate.ps1   # Windows PowerShell
