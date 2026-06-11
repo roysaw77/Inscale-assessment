@@ -9,6 +9,7 @@ chromadb
 sentence-transformers
 transformers
 torch
+torchvision
 
 streamlit
 python-dotenv
