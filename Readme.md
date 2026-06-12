@@ -177,10 +177,16 @@ I focus on the percision of the result seems the response is not too long that i
 
 ---
 
-## ✨ How you ensure answer quality
+## ✨ How I ensure answer quality
 The answer are stricly following by the references context , if the result didnt have the proper reference that it will show don't know  
 I'm setting it at the prompting   
 ![alt text](Picture/Prompt.png)
 
 Moreover, every answer will show the references or context in the terminal, for me to check whether the models are strictly follow the references.  
 ![The References](Picture/Example2.png)
+
+
+## Future Improvement
+make a MetaFiltering For User search more percisely
+Zero Shot and Few Shot Prompting evaluate performance
+Using MMR searching method since some of the content are similar
