@@ -187,6 +187,6 @@ Moreover, every answer will show the references or context in the terminal, for 
 
 
 ## Future Improvement
-make a MetaFiltering For User search more percisely
-Zero Shot and Few Shot Prompting evaluate performance
-Using MMR searching method since some of the content are similar
+- make a MetaFiltering For User search more percisely
+- Zero Shot and Few Shot Prompting evaluate performance
+- Using MMR searching method since some of the content are similar
