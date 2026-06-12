@@ -34,7 +34,6 @@ I'm using `BAAI/bge-large-en-v1.5` for my embedding, In addition, I utilized CUD
 ### 🔹 Merged csv
 Merging Segments and documents csv by(Document ID and AGORA ID)
 - Official Name
-- Casual Name
 - Authority
 - Collection
 - Short Summary
@@ -66,8 +65,6 @@ I'm using Nvidia Nim `meta/llama-3.3-70b-instruct` LLM for my system
 Limitation
 - Im using high parameter model the latency might slightly slow("TradeOff")
 - top 3 similarity resources can focus on the main content, but when the question are containing multi topic,top three chunks may not provide enough information to cover("TradeOff")
-- Large chunks may contain information that is not directly relevant to the user's query. ("TradeOff")
-- Not all the file got the same pattern like `1044.txt`, if the question didn't mention the section accuracy might slightly drop
 - No reranking system, The retrieved chunks are passed directly to the LLM without a re-ranking mechanism. Some retrieved chunks may be less relevant than others, reducing the overall quality of the generated answer.
 
 ---
