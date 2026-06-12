@@ -32,8 +32,11 @@ def retrieve_context(db, query, k=5):
     return context, results
 
 def generate_answer(context, query):
-    api_key = st.secrets.get("NVIDIA_API_KEY") or os.getenv("NVIDIA_API_KEY")
-
+    try:
+        api_key = st.secrets["NVIDIA_API_KEY"]
+    except Exception:
+        api_key = os.getenv("NVIDIA_API_KEY")
+        
     if not api_key:
         st.error("NVIDIA_API_KEY not found")
         st.stop()
